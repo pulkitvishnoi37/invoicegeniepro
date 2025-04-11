@@ -1,0 +1,1 @@
+console.log('InvoiceGenie App Loaded');
