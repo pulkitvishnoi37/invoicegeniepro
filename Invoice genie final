@@ -1,0 +1,33 @@
+invoicegenie-app/
+│
+├── assets/              # Images, icons, logos, and other static files
+│   ├── logo/            # Logo and related assets
+│   ├── images/          # Images for the website (banners, backgrounds, etc.)
+│
+├── css/                 # Stylesheets for the website
+│   ├── main.css         # Main styles for layout
+│   ├── responsive.css   # Media queries and responsive styles
+│
+├── js/                  # JavaScript files for dynamic functionalities
+│   ├── script.js        # Main JavaScript file
+│   ├── chatbot.js       # Script for the basic AI chatbot
+│   ├── formValidation.js # Scripts for form validation
+│
+├── views/               # HTML files for different pages
+│   ├── index.html       # Home page
+│   ├── invoice.html     # Invoice generation page
+│   ├── quotation.html   # Quotation generation page
+│   ├── word-to-pdf.html # Word to PDF conversion page
+│   ├── pdf-to-word.html # PDF to Word conversion page
+│   ├── help.html        # Help and FAQ page
+│   └── about.html       # About page with your bio, image, and signature
+│
+├── data/                # Data files (JSON, local data storage for FAQ, etc.)
+│   ├── faq.json         # FAQ data for auto-answer functionality
+│
+├── robots.txt           # Robots.txt file for SEO
+├── sitemap.xml          # Sitemap for search engines
+├── manifest.json        # Manifest for web app configurations
+├── index.html           # Entry point of the website (landing page)
+├── .gitignore           # To ignore unnecessary files/folders in GitHub
+└── README.md            # Project documentation file
