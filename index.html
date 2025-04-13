@@ -1,36 +1,82 @@
 <!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="InvoiceGenie - Smart invoicing made simple. Create invoices, quotations, and convert PDFs online." />
-  <title>InvoiceGenie - Smart Invoicing Made Simple</title>
+  <meta name="description" content="InvoiceGenie - Create beautiful invoices and quotations with ease." />
+  <meta name="author" content="Pulkit Vishnoi" />
+  <title>InvoiceGenie</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="/logo.png" type="image/png" />
 </head><body>
-  <!-- Navbar -->
-  <header class="navbar">
-    <div class="container">
+  <header>
+    <nav class="navbar">
       <div class="logo">InvoiceGenie</div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#help">Help</a></li>
-          <li><a href="#login" class="btn-primary">Login</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>  <!-- Hero Section -->  <section class="hero" id="home">
-    <div class="container">
-      <div class="hero-content">
-        <h1>Smart Invoicing Made Simple</h1>
-        <p>Effortlessly create invoices, quotations, and PDF tools for your business – all in one place.</p>
-        <div class="cta-buttons">
-          <a href="#invoice-form" class="btn-primary">Create Invoice</a>
-          <a href="#templates" class="btn-secondary">Explore Templates</a>
-        </div>
-      </div>
-    </div>
-  </section>  <!-- Placeholder: More Sections Will Go Here -->  <script src="script.js"></script></body></html>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#templates">Templates</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#help">Help & Support</a></li>
+      </ul>
+    </nav>
+  </header>  <main>
+    <section id="home" class="hero">
+      <h1>Create Invoices & Quotations in Seconds</h1>
+      <p>Professional, editable, and beautifully designed templates.</p>
+      <button onclick="openForm('invoice')">Create Invoice</button>
+      <button onclick="openForm('quotation')">Create Quotation</button>
+    </section><section id="features">
+  <h2>Features</h2>
+  <ul>
+    <li>15+ premium templates</li>
+    <li>Custom logo upload</li>
+    <li>GST / PAN / VAT options</li>
+    <li>Save invoice details for reuse</li>
+    <li>10-day full free trial</li>
+  </ul>
+</section>
+
+<section id="form-section" class="hidden">
+  <h2 id="form-title">Create Document</h2>
+  <form id="document-form">
+    <label>Business Name <input type="text" name="businessName" required /></label>
+    <label>Client Name <input type="text" name="clientName" required /></label>
+    <label>Items <textarea name="items" placeholder="Item 1 - Price\nItem 2 - Price" required></textarea></label>
+    <label>GST/PAN/VAT <input type="text" name="taxDetails" /></label>
+    <label>Upload Logo <input type="file" accept="image/*" id="logoUpload" /></label>
+    <button type="submit">Generate PDF</button>
+  </form>
+</section>
+
+<section id="templates">
+  <h2>Select Template</h2>
+  <div id="template-gallery">
+    <!-- Dynamically loaded 15+ templates -->
+  </div>
+</section>
+
+<section id="about">
+  <h2>About the Founder</h2>
+  <img src="founder.jpg" alt="Pulkit Vishnoi" class="founder-pic" />
+  <p>Pulkit Vishnoi is a passionate entrepreneur... (bio here)</p>
+</section>
+
+<section id="help">
+  <h2>Help & Support</h2>
+  <div class="faq">
+    <h3>FAQ</h3>
+    <p><strong>Q:</strong> Invoice kaise banaye?<br /><strong>A:</strong> Create Invoice button pe click karein...</p>
+    <!-- Add more FAQs here -->
+  </div>
+</section>
+
+<div id="chatbot">
+  <button id="chat-toggle">Need Help?</button>
+  <div class="chat-window hidden">
+    <p>Hi! Ask me anything about using InvoiceGenie.</p>
+    <!-- Simple Q&A chat UI here -->
+  </div>
+</div>
+
+  </main>  <footer>
+    <p>&copy; 2025 InvoiceGenie. Made with love in India.</p>
+  </footer>  <script src="script.js"></script>  <script src="main.js"></script></body></html>
