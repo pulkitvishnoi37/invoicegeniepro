@@ -197,3 +197,64 @@ footer {
   font-size: 1rem;
   color: #333;
 }
+
+
+.quotation-form-container {
+  padding: 40px;
+  max-width: 600px;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.quotation-form-container .form-group {
+  margin-bottom: 20px;
+}
+
+.quotation-form-container .form-group label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.quotation-form-container .form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.quotation-form-container .btn {
+  background-color: #0066cc;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.quotation-form-container .btn:hover {
+  background-color: #004b99;
+}
+
+.quotation-output {
+  margin-top: 40px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.quotation {
+  text-align: left;
+}
+
+.quotation h2 {
+  color: #0066cc;
+}
+
+.quotation p {
+  font-size: 1rem;
+  color: #333;
+}
