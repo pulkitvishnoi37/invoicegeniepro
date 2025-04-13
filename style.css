@@ -258,3 +258,65 @@ footer {
   font-size: 1rem;
   color: #333;
 }
+
+
+.file-upload-container {
+  padding: 40px;
+  max-width: 600px;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.file-upload-container .form-group {
+  margin-bottom: 20px;
+}
+
+.file-upload-container .form-group label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.file-upload-container .form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.file-upload-container .btn {
+  background-color: #0066cc;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.file-upload-container .btn:hover {
+  background-color: #004b99;
+}
+
+.word-output, .pdf-output {
+  margin-top: 40px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.word-output a, .pdf-output a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #0066cc;
+  color: white;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.word-output a:hover, .pdf-output a:hover {
+  background-color: #004b99;
+}
