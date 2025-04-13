@@ -1,82 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invoice Genie</title>
-    <link rel="stylesheet" href="styles/main.css">
-</head>
-<body>
-    <header>
-        <h1>Invoice Genie</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="pricing.html">Pricing</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+[7:29 pm, 13/04/2025] Pulkit: Diagnosis: The build failure is caused by an error related to the inability to find the package.json file at the specified location.
 
-    <main>
-        <section id="hero">
-            <h2>Create, Manage & Download Invoices Easily</h2>
-            <button onclick="startInvoice()">Start Now</button>
-        </section>
-    </main>
+Solution:
 
-    <footer>
-        <p>© 2025 Invoice Genie | All rights reserved</p>
-    </footer>
-<section id="invoice">
-    <h2>Create Your Invoice</h2>
-    <form id="invoiceForm">
-        <label>Client Name:</label>
-        <input type="text" id="clientName" required>
+Verify that the package.json file exists in your project's root directory and was committed to the repository.
+If the package.json file is present, ensure that it is in the correct location and has the appropriate permissions.
+Check if there are any issues with the file system or disk that could be preventing the build process from accessing the package.json file.
+If everything seems correct, you may need to investigate further by reviewing the npm configuration and environment setup.
+By ensuring the presence and correctness of the package.json file in the repository, you should be able to resolve this build failure.
+[9:42 pm, 13/04/2025] Pulkit: if(process.env.NODE_ENV !== 'production'){
+    require('dotenv').config()
+}
 
-        <label>Invoice Date:</label>
-        <input type="date" id="invoiceDate" required>
+const express = require('express')
+const path = require('path')
+const fileUpload = require('express-fileupload')
+const ejs = require('ejs')
+const db = require('./routes/db-config')
+const bcrypt = require('bcryptjs')
+const cookie = require('cookie-parser')
+const jwt = require('jsonwebtoken')
+const mysql = require('mysql')
+const app = express()
+const port = process.env.PORT
 
-        <label>Amount:</label>
-        <input type="number" id="amount" required>
+app.use('/js', express.static(__dirname + '/public/assets/js'))
+app.use('/css', express.static(__dirname + '/public/assets/css'))
+app.use('/template-css', express.static(__dirname + '/public/templates/template-css'))
+app.set('view engine','ejs')
+app.use(express.static('public'))
+app.use(cookie())
+app.use(express.json())
+app.use(fileUpload())
 
-        <button type="button" onclick="generateInvoice()">Download PDF</button>
-    </form>
-</section>
+// db.connect((err) => {
+//     if(err) throw err
+//     console.log('DB Connected!');
+// })
 
-    <div id="chatbot">
-    <button onclick="toggleChat()">💬 Help & Support</button>
-    <div id="chatWindow">
-        <h3>How can I help you?</h3>
-        <select id="faqSelect" onchange="getAnswer()">
-            <option value="">Select a question</option>
-            <option value="invoice">How to create an invoice?</option>
-            <option value="quotation">How to generate a quotation?</option>
-            <option value="wordtopdf">How does Word to PDF work?</option>
-            <option value="subscription">What features unlock with subscription?</option>
-        </select>
-        <p id="chatAnswer"></p>
-    </div>
-</div>
-    
 
-    <script src="scripts/app.js"></script>
-</body>
-</html>
 
-<div id="chatbot">
-    <button onclick="toggleChat()">💬 Help & Support</button>
-    <div id="chatWindow">
-        <h3>How can I help you?</h3>
-        <select id="faqSelect" onchange="getAnswer()">
-            <option value="">Select a question</option>
-            <option value="invoice">How to create an invoice?</option>
-            <option value="quotation">How to generate a quotation?</option>
-            <option value="wordtopdf">How does Word to PDF work?</option>
-            <option value="subscription">What features unlock with subscription?</option>
-        </select>
-        <p id="chatAnswer"></p>
-    </div>
-</div>
+app.use('/', require('./routes/pages').router)
+app.use('/api', require('./controllers/validate'))
+app.use('/api', require('./controllers/auth'))
 
+
+app.listen(port, ()=> console.log(`Server started on
