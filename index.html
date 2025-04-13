@@ -1,33 +1,35 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>InvoiceGenie - Home</title>
-  <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Genie</title>
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-  <header class="navbar">
-    <img src="assets/logo.png" alt="InvoiceGenie Logo" class="logo" />
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="tools.html">Tools</a>
-      <a href="about.html">About</a>
-      <a href="pricing.html">Pricing</a>
-    </nav>
-  </header>
+    <header>
+        <h1>Invoice Genie</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <section class="hero">
-    <h1>Welcome to InvoiceGenie</h1>
-    <p>Smart Invoicing & PDF Utilities for Businesses and Freelancers</p>
-    <a href="tools.html" class="btn">Start Using Tools</a>
-  </section>
+    <main>
+        <section id="hero">
+            <h2>Create, Manage & Download Invoices Easily</h2>
+            <button onclick="startInvoice()">Start Now</button>
+        </section>
+    </main>
 
-  <footer>
-    <p>&copy; 2025 InvoiceGenie. All rights reserved.</p>
-  </footer>
+    <footer>
+        <p>© 2025 Invoice Genie | All rights reserved</p>
+    </footer>
 
-  <script src="js/script.js"></script>
+    <script src="scripts/app.js"></script>
 </body>
 </html>
