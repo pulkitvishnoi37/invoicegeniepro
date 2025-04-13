@@ -1,7 +1,7 @@
 [build]
-  command = "npm run build"
-  publish = "out"
+  publish = "."
 
+# Optional: only if you're planning to use SPA routing
 [[redirects]]
   from = "/*"
   to = "/index.html"
