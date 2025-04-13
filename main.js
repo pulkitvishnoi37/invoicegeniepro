@@ -21,9 +21,3 @@ document.getElementById("invoice-form").addEventListener("submit", function (e) 
 });
 ```
 
-**4. script.js (optional enhancement for later)**
-
-```javascript
-// Future enhancement: Tooltips, export to PDF, download feature, etc.
-console.log("script.js loaded - ready for enhancements");
-```
