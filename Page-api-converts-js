@@ -1,0 +1,6 @@
+// Word ↔ PDF Converter (LibreOffice/Node.js)
+export default async (req, res) => {
+  const { file, format } = req.body;
+  // Add conversion logic here (e.g., using 'pdf-lib' or cloud function)
+  res.status(200).send({ url: "converted-file." + format });
+};
