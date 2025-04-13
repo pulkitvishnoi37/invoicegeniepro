@@ -1,39 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> <link rel="stylesheet" href="style.css" />
+<head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>InvoiceGenie - Smart Invoicing Made Simple</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InvoiceGenie - Smart Invoice Tool</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>InvoiceGenie</h1>
-    <p>Smart. Simple. Professional.</p>
+    <h1>Welcome to InvoiceGenie</h1>
+    <p>Your smart, simple & professional invoicing tool.</p>
   </header>
 
   <main>
-    <section class="intro">
-      <h2>Generate Your Invoice</h2>
-      <form id="invoiceForm">
-        <input type="text" id="clientName" placeholder="Client Name" required />
-        <input type="text" id="service" placeholder="Service Provided" required />
-        <input type="number" id="amount" placeholder="Amount (₹)" required />
-        <button type="submit">Generate Invoice</button>
-      </form>
+    <section class="feature-box">
+      <h2>Create Invoice</h2>
+      <button onclick="createInvoice()">Generate</button>
     </section>
 
-    <section class="invoice-preview" id="invoicePreview" style="display:none;">
-      <h3>Invoice Preview</h3>
-      <div id="previewBox"></div>
-      <button onclick="downloadInvoice()">Download</button>
+    <section class="feature-box">
+      <h2>Word to PDF</h2>
+      <button onclick="convertWordToPDF()">Convert</button>
+    </section>
+
+    <section class="feature-box">
+      <h2>PDF to Word</h2>
+      <button onclick="convertPDFToWord()">Convert</button>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 InvoiceGenie | Made with passion by Pulkit Vishnoi</p>
+    <p>© 2025 InvoiceGenie. All rights reserved.</p>
   </footer>
 
-  <script src="main.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
