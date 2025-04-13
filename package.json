@@ -1,0 +1,16 @@
+{
+  "name": "invoice-genie",
+  "version": "1.0.0",
+  "description": "A lightweight invoice and quotation generator",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "build": "echo 'No build process required'"
+  },
+  "keywords": ["invoice", "quotation", "PDF generator", "subscription"],
+  "author": "Pulkit Vishnoi",
+  "license": "MIT",
+  "dependencies": {
+    "jspdf": "^2.5.1"
+  }
+}
