@@ -1,44 +1,36 @@
-<!DOCTYPE html><html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>InvoiceGenie - Smart Billing App</title>
+  <meta name="description" content="InvoiceGenie - Smart invoicing made simple. Create invoices, quotations, and convert PDFs online." />
+  <title>InvoiceGenie - Smart Invoicing Made Simple</title>
   <link rel="stylesheet" href="style.css" />
-  <script defer src="main.js"></script>
-</head>
-<body>
-  <div class="container">
-    <header>
-      <img src="logo.png" alt="InvoiceGenie Logo" class="logo" />
-      <h1>InvoiceGenie</h1>
-      <p class="tagline">Smart, Simple & Elegant Billing</p>
-    </header><section class="template-selector">
-  <label for="template">Choose Template:</label>
-  <select id="template">
-    <option value="template1">Professional Blue</option>
-    <option value="template2">Modern Grey</option>
-    <option value="template3">Elegant White</option>
-  </select>
-</section>
-
-<section class="invoice-form">
-  <h2>Create Invoice</h2>
-  <form id="invoiceForm">
-    <input type="text" placeholder="Your Company Name" required />
-    <input type="text" placeholder="Client Name" required />
-    <input type="email" placeholder="Client Email" required />
-    <input type="text" placeholder="Invoice Number" required />
-    <textarea placeholder="Item Details (description, qty, price)" required></textarea>
-    <input type="text" placeholder="GST / VAT / PAN" />
-    <label>Upload Logo (optional): <input type="file" id="logoUpload" /></label>
-    <button type="submit">Generate PDF</button>
-  </form>
-</section>
-
-<footer>
-  <p>Need help? Email us at <a href="mailto:support@invoicegenieapp.com">support@invoicegenieapp.com</a></p>
-  <small>© 2025 InvoiceGenie | No branding shown in PDF</small>
-</footer>
-
-  </div>  <!-- Modal or Preview container for invoice will go here --></body>
-</html>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head><body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">InvoiceGenie</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#help">Help</a></li>
+          <li><a href="#login" class="btn-primary">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>  <!-- Hero Section -->  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Smart Invoicing Made Simple</h1>
+        <p>Effortlessly create invoices, quotations, and PDF tools for your business – all in one place.</p>
+        <div class="cta-buttons">
+          <a href="#invoice-form" class="btn-primary">Create Invoice</a>
+          <a href="#templates" class="btn-secondary">Explore Templates</a>
+        </div>
+      </div>
+    </div>
+  </section>  <!-- Placeholder: More Sections Will Go Here -->  <script src="script.js"></script></body></html>
