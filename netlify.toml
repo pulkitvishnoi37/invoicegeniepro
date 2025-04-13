@@ -1,8 +1,3 @@
-[build]
-  publish = "."
-
-# Optional: only if you're planning to use SPA routing
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+git add netlify.toml
+git commit -m "Fixed Netlify config for manual HTML site"
+git push
