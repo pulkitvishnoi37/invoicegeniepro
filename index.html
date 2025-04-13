@@ -1,47 +1,39 @@
-[7:29 pm, 13/04/2025] Pulkit: Diagnosis: The build failure is caused by an error related to the inability to find the package.json file at the specified location.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>InvoiceGenie - Smart Invoicing Made Simple</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>InvoiceGenie</h1>
+    <p>Smart. Simple. Professional.</p>
+  </header>
 
-Solution:
+  <main>
+    <section class="intro">
+      <h2>Generate Your Invoice</h2>
+      <form id="invoiceForm">
+        <input type="text" id="clientName" placeholder="Client Name" required />
+        <input type="text" id="service" placeholder="Service Provided" required />
+        <input type="number" id="amount" placeholder="Amount (₹)" required />
+        <button type="submit">Generate Invoice</button>
+      </form>
+    </section>
 
-Verify that the package.json file exists in your project's root directory and was committed to the repository.
-If the package.json file is present, ensure that it is in the correct location and has the appropriate permissions.
-Check if there are any issues with the file system or disk that could be preventing the build process from accessing the package.json file.
-If everything seems correct, you may need to investigate further by reviewing the npm configuration and environment setup.
-By ensuring the presence and correctness of the package.json file in the repository, you should be able to resolve this build failure.
-[9:42 pm, 13/04/2025] Pulkit: if(process.env.NODE_ENV !== 'production'){
-    require('dotenv').config()
-}
+    <section class="invoice-preview" id="invoicePreview" style="display:none;">
+      <h3>Invoice Preview</h3>
+      <div id="previewBox"></div>
+      <button onclick="downloadInvoice()">Download</button>
+    </section>
+  </main>
 
-const express = require('express')
-const path = require('path')
-const fileUpload = require('express-fileupload')
-const ejs = require('ejs')
-const db = require('./routes/db-config')
-const bcrypt = require('bcryptjs')
-const cookie = require('cookie-parser')
-const jwt = require('jsonwebtoken')
-const mysql = require('mysql')
-const app = express()
-const port = process.env.PORT
+  <footer>
+    <p>&copy; 2025 InvoiceGenie | Made with passion by Pulkit Vishnoi</p>
+  </footer>
 
-app.use('/js', express.static(__dirname + '/public/assets/js'))
-app.use('/css', express.static(__dirname + '/public/assets/css'))
-app.use('/template-css', express.static(__dirname + '/public/templates/template-css'))
-app.set('view engine','ejs')
-app.use(express.static('public'))
-app.use(cookie())
-app.use(express.json())
-app.use(fileUpload())
-
-// db.connect((err) => {
-//     if(err) throw err
-//     console.log('DB Connected!');
-// })
-
-
-
-app.use('/', require('./routes/pages').router)
-app.use('/api', require('./controllers/validate'))
-app.use('/api', require('./controllers/auth'))
-
-
-app.listen(port, ()=> console.log(`Server started on
+  <script src="main.js"></script>
+</body>
+</html>
