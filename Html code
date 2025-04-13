@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About - InvoiceGenie</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <img src="assets/logo.png" alt="InvoiceGenie Logo" class="logo" />
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="tools.html">Tools</a>
+      <a href="about.html">About</a>
+      <a href="pricing.html">Pricing</a>
+    </nav>
+  </header>
+
+  <section class="about">
+    <h1>About the Founder</h1>
+    <div class="about-container">
+      <img src="assets/founder.jpg" alt="Pulkit Vishnoi" class="founder-img" />
+      <div class="about-text">
+        <p><strong>Pulkit Vishnoi</strong> is a young and passionate entrepreneur with a vision to empower small businesses and freelancers with smart, simple, and reliable digital tools.</p>
+        <p>Coming from a humble background, Pulkit has always believed in building something meaningful—something that truly helps people.</p>
+        <p><em>“Dream big, start small, but most of all—start.”</em></p>
+        <img src="assets/signature.png" alt="Signature" class="signature-img" />
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 InvoiceGenie. All rights reserved.</p>
+  </footer>
+</body>
+</html>
