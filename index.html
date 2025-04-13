@@ -3,36 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>InvoiceGenie - Smart Invoice Tool</title>
+  <title>InvoiceGenie - Smart Invoicing Tool</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Welcome to InvoiceGenie</h1>
-    <p>Your smart, simple & professional invoicing tool.</p>
+    <h1>InvoiceGenie</h1>
+    <p>Smart, Simple & Reliable Invoicing Platform</p>
+    <button onclick="generateInvoice()">Create Invoice</button>
   </header>
 
   <main>
-    <section class="feature-box">
-      <h2>Create Invoice</h2>
-      <button onclick="createInvoice()">Generate</button>
+    <section id="features">
+      <h2>Features</h2>
+      <ul>
+        <li>Invoice Creator</li>
+        <li>Quotation Generator</li>
+        <li>Word to PDF</li>
+        <li>PDF to Word</li>
+      </ul>
     </section>
 
-    <section class="feature-box">
-      <h2>Word to PDF</h2>
-      <button onclick="convertWordToPDF()">Convert</button>
-    </section>
-
-    <section class="feature-box">
-      <h2>PDF to Word</h2>
-      <button onclick="convertPDFToWord()">Convert</button>
+    <section id="tools">
+      <input type="file" id="uploadFile" />
+      <button onclick="convertToPDF()">Convert to PDF</button>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 InvoiceGenie. All rights reserved.</p>
+    <p>Made with love by Pulkit Vishnoi</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
