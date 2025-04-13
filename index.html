@@ -1,39 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>InvoiceGenie - Smart Invoicing Tool</title>
+  <title>InvoiceGenie - Smart Billing App</title>
   <link rel="stylesheet" href="style.css" />
+  <script defer src="main.js"></script>
 </head>
 <body>
-  <header>
-    <h1>InvoiceGenie</h1>
-    <p>Smart, Simple & Reliable Invoicing Platform</p>
-    <button onclick="generateInvoice()">Create Invoice</button>
-  </header>
+  <div class="container">
+    <header>
+      <img src="logo.png" alt="InvoiceGenie Logo" class="logo" />
+      <h1>InvoiceGenie</h1>
+      <p class="tagline">Smart, Simple & Elegant Billing</p>
+    </header><section class="template-selector">
+  <label for="template">Choose Template:</label>
+  <select id="template">
+    <option value="template1">Professional Blue</option>
+    <option value="template2">Modern Grey</option>
+    <option value="template3">Elegant White</option>
+  </select>
+</section>
 
-  <main>
-    <section id="features">
-      <h2>Features</h2>
-      <ul>
-        <li>Invoice Creator</li>
-        <li>Quotation Generator</li>
-        <li>Word to PDF</li>
-        <li>PDF to Word</li>
-      </ul>
-    </section>
+<section class="invoice-form">
+  <h2>Create Invoice</h2>
+  <form id="invoiceForm">
+    <input type="text" placeholder="Your Company Name" required />
+    <input type="text" placeholder="Client Name" required />
+    <input type="email" placeholder="Client Email" required />
+    <input type="text" placeholder="Invoice Number" required />
+    <textarea placeholder="Item Details (description, qty, price)" required></textarea>
+    <input type="text" placeholder="GST / VAT / PAN" />
+    <label>Upload Logo (optional): <input type="file" id="logoUpload" /></label>
+    <button type="submit">Generate PDF</button>
+  </form>
+</section>
 
-    <section id="tools">
-      <input type="file" id="uploadFile" />
-      <button onclick="convertToPDF()">Convert to PDF</button>
-    </section>
-  </main>
+<footer>
+  <p>Need help? Email us at <a href="mailto:support@invoicegenieapp.com">support@invoicegenieapp.com</a></p>
+  <small>© 2025 InvoiceGenie | No branding shown in PDF</small>
+</footer>
 
-  <footer>
-    <p>Made with love by Pulkit Vishnoi</p>
-  </footer>
-
-  <script src="main.js"></script>
-</body>
+  </div>  <!-- Modal or Preview container for invoice will go here --></body>
 </html>
