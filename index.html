@@ -1,12 +1,233 @@
-<!DOCTYPE html>
+DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>InvoiceGenie</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="shortcut icon" href="./assets/images/favicon (3).ico" type="image/profile">
+    <title>Invoice Genie</title>
+
 </head>
 <body>
-  <div id="root"></div>
-  <script src="main.js"></script>
+    <!-- Navbar -->
+<nav class="navbar fixed-top navbar-expand-lg">
+    <div class="container-fluid">
+        <a class="navbar-brand mx-4" href="/"><img src="./assets/images/logo2.png" alt="Logo" width="220" height="50" class="d-inline-block align-text-top logo-img"></a>
+        <!-- <a class="navbar-brand mx-4 my-2" href="#home"><h4>Invoice<span>Genie</span></h4></a> -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- <span class="navbar-toggler-icon"></span> -->
+        <i class="bi bi-columns-gap"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link mx-4" aria-current="page" href="/#home">Home</a>
+          <a class="nav-link mx-4" href="/#features">Features</a>
+          <a class="nav-link mx-4" href="/#steps">Steps</a>
+          <a class="nav-link mx-4" href="/#templates">Templates</a>
+        </div>
+        <!-- put if condition here -->
+        
+        <!-- put else condition here -->
+
+        <div>
+          <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-sm">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalToggleLabel">Login</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close1"></button>
+                </div>
+                <div class="modal-body">
+                  <form onsubmit="return false;" id="form1">
+                    <div class="mb-3">
+                      <label for="email" class="col-form-label">Email</label>
+                      <input type="email" class="form-control form-control-sm" id="email" autocomplete="off" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="password" class="col-form-label">Password</label>
+                      <input type="password" class="form-control form-control-sm" id="password" autocomplete="off" required>
+                    </div>
+                    <div class="my-3">
+                      <div class="alert alert-danger" role="alert" id="error" style="display: none; font-size: 13px; --bs-alert-padding-y: 0.5rem !important;"></div>
+                      <div class="alert alert-success" role="alert" id="success" style="display: none; font-size: 13px; --bs-alert-padding-y: 0.5rem !important;"></div>
+                      <button type="submit" class="btn btn-primary btn-sm">Login</button>
+                      <button class="btn btn-outline-primary btn-sm ms-4" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Sign Up</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-sm">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalToggleLabel2">Sign up</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close2"></button>
+                </div>
+                <div class="modal-body">
+                  <form onsubmit="return false;" id="form2">
+                    <div class="mb-3">
+                      <label for="username" class="col-form-label">Username</label>
+                      <input type="text" class="form-control form-control-sm" id="username" autocomplete="off" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="email1" class="col-form-label">Email</label>
+                      <input type="email" class="form-control form-control-sm" id="email1" autocomplete="off" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="password1" class="col-form-label">Password</label>
+                      <input type="password" class="form-control form-control-sm" id="password1" autocomplete="off" required>
+                    </div>
+                    <div class="my-3">
+                      <div class="alert alert-danger" role="alert" id="error1" style="display: none; font-size: 13px; --bs-alert-padding-y: 0.5rem !important;"></div>
+                      <div class="alert alert-success" role="alert" id="success1" style="display: none; font-size: 13px; --bs-alert-padding-y: 0.5rem !important;"></div>
+                      <button type="submit" class="btn btn-primary btn-sm">Sign up</button>
+                      <button class="btn btn-outline-primary btn-sm ms-4" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Login</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="btn btn-primary mx-4" data-bs-toggle="modal" href="#exampleModalToggle" role="button"><i class="bi bi-person me-2" style="font-size:14px;"></i>Login/Sign up</a>
+        </div>
+        
+
+        <!-- /put else condition here -->
+        
+        <!-- <a href="#templates" class="btn btn-primary mx-4">Create Invoice</a> -->
+      </div>
+    </div>
+  </nav>
+<!-- /Navbar -->
+
+
+<script src="./js/login.js"></script>
+<script src="./js/register.js"></script>
+
+    <!-- Home -->
+    <div class="container-fluid home-section" id="home">
+        <div class="row row-cols-1 row-cols-lg-2 my-0 mx-4 justify-content-around mt-5">
+          <div class="col mx-4 my-4 py-4 ">
+            <h1 class="heading display-4 h1 ">Online invoicing made easy</h1>
+            <p class="homeText pt-4">Businesses of all sizes use invoices don't let your business stuck behind.<br> Our simple and easy to use app let's you create a modern <br>looking invoice in just 3 steps.</p>
+            <a href="#templates" class="btn btn-primary my-4">Create invoice now</a>
+            <div class="verfied my-1"><i class="bi bi-patch-check-fill"></i><small class="my-1 text-center">No Sign up required</small></div>
+          </div>
+          <div class="col headImage d-flex justify-content-center"><img src="./assets/images/Invoice-amico.svg" alt=""></div>
+        </div>
+    </div>
+    <!-- /Home -->
+    <hr>
+    <!-- Features Section -->
+    <div class="container text-center features-section" id="features">
+        <div class="row justify-content-center">
+            <div class="features-heading">
+                <h1 class="heading display-5 h1">Explore Features</h1>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="logo-container1 logoContainer mt-5"><i class="bi bi-3-circle-fill"></i></div>
+            <h5 class="mt-4">Just 3 Steps</h5>
+            <p>Generate & download your invoice in 3 steps.</p>
+        </div>
+
+        <div class="cards">
+            <div class="logo-container2 logoContainer mt-5"><i class="bi bi-receipt"></i></div>
+            <h5 class="mt-4">Invoice Templates</h5>
+            <p>Choose from verity of invoice templates.</p>
+        </div>
+
+        <div class="cards">
+            <div class="logo-container3 logoContainer mt-5"><i class="bi bi-emoji-smile-fill"></i></div>
+            <h5 class="mt-4">Free to use</h5>
+            <p>Download your invoices from anywhere for free.</p>
+        </div>
+    </div>
+    <!-- /Features Section -->
+    <hr>
+    <!-- Invoice steps -->
+    <div class="container-fluid Invoice-steps-section" id="steps">
+        <div class="row row-cols-1 row-cols-lg-2 my-0 mx-4 justify-content-around">
+            <div class="col ms-4">
+                <div class="steps-container d-none d-md-block justify-content-center">
+                    <div class="steps py-3">
+                        <!-- <i class="bi bi-1-circle me-3"></i> -->
+                        <i class="bi bi-collection me-3"></i>
+                        <h4>Select template</h4>
+                    </div>
+                    <div class="steps py-3">
+                        <!-- <i class="bi bi-2-circle me-3"></i> -->
+                        <i class="bi bi-file-text me-3"></i>
+                        <h4>Fill the invoice</h4>
+                    </div>
+                    <div class="steps py-3">
+                        <!-- <i class="bi bi-3-circle me-3"></i> -->
+                        <i class="bi bi-cloud-arrow-down me-3"></i>
+                        <h4>Download</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col headImage gy-5">
+                <div class="row">
+                    <h1 class="heading display-5 h1">The easiest invoicing app you'll ever use</h1>
+                    <p class="homeText pt-4">Make professional looking invoice in just 3 steps. You'll never go back to excel again to create invoices. Just give it a try!</p>
+                    <div class="col">
+                        <a href="#templates" class="btn btn-primary my-4">Create invoice now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Invoice steps -->
+    <hr>
+    <!-- Templates -->
+    <div class="container text-center features-section" id="templates">
+        <div class="row justify-content-center">
+            <div class="features-heading">
+                <h1 class="heading display-5 h1">Browse our collection of Invoice Templates</h1>
+                <small>You can start creating your Invoice by clicking on any of the below template.</small>
+            </div>
+        </div>
+        <a href="/fillInvoice?templateId=printReady&type=new"><img src="./assets/images/template1.png" class="template" id="template1"  alt=""></a>
+        <a href="/fillInvoice?templateId=template-2&type=new"><img src="./assets/images/template2.png" class="template" id="template2" alt=""></a>
+        <a href="/fillInvoice?templateId=template-3&type=new"><img src="./assets/images/template3.png" class="template" id="template3" alt=""></a>
+        <a href="/fillInvoice?templateId=template-4&type=new"><img src="./assets/images/template4.png" class="template" id="template4" alt=""></a>
+        <a href="/fillInvoice?templateId=template-5&type=new"><img src="./assets/images/template5.png" class="template" id="template5" alt=""></a>
+        <a href="/fillInvoice?templateId=template-6&type=new"><img src="./assets/images/template6.png" class="template" id="template6" alt=""></a> 
+    </div>
+    <!-- /Templates -->
+    <hr>
+    <!-- try button -->
+    <div class="container-fluid ready-section text-center">
+        <div class="text">
+            <h1 class="heading heading1 display-5 h1">
+                Ready to give it a try?
+            </h1>
+            <p class="homeText pt-1 pt-4 h5">Create a free invoice on the go and share it with your customers!</p>
+            <a href="#templates" class="btn btn-primary my-4">Create invoice now</a>
+        </div>
+    </div>
+    <!-- /try button -->
+    <hr>
+    <!-- footer -->
+    <div class="container-fluid footer-section text-center">
+    <div>
+        <a class="navbar-brand mx-4 my-2" href="#home"><img src="./assets/images/logo2.png" alt="Logo" width="220" height="50" class="d-inline-block align-text-top logo-img"></a>
+    </div>
+    
+    <!-- <a class="navbar-brand mx-4 my-2 footer-logo" href="#home"><h3 class="footer-logo-text">Invoice<span>Genie</span>&#8482;</h3></a> -->
+    <a href="https://github.com/OmkarShinde1996/invoice-genie-2.0" target="_blank"><i class="bi bi-github"></i></a>
+</div>
+    <!-- /footer -->
+    
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <!-- <script src="./assets/js/templateDeciding.js"></script> -->
 </body>
 </html>
