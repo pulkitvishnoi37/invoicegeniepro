@@ -44,6 +44,21 @@
         <button type="button" onclick="generateInvoice()">Download PDF</button>
     </form>
 </section>
+
+    <div id="chatbot">
+    <button onclick="toggleChat()">💬 Help & Support</button>
+    <div id="chatWindow">
+        <h3>How can I help you?</h3>
+        <select id="faqSelect" onchange="getAnswer()">
+            <option value="">Select a question</option>
+            <option value="invoice">How to create an invoice?</option>
+            <option value="quotation">How to generate a quotation?</option>
+            <option value="wordtopdf">How does Word to PDF work?</option>
+            <option value="subscription">What features unlock with subscription?</option>
+        </select>
+        <p id="chatAnswer"></p>
+    </div>
+</div>
     
 
     <script src="scripts/app.js"></script>
