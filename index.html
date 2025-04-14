@@ -1,57 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="InvoiceGenie - Simple Invoicing & Digital Tools for Small Businesses">
-    <meta name="keywords" content="invoicing, small business, freelancer tools, PDF generator">
-    <meta name="author" content="Pulkit Vishnoi">
-    <title>InvoiceGenie - About Us</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <!-- Navbar -->
-    <nav>
-        <div class="logo">
-            <img src="assets/assets_logo.png" alt="InvoiceGenie Logo">
-        </div>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Features</a></li>
-            <li><a href="#">Steps</a></li>
-            <li><a href="#">Templates</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Help & Support</a></li>
-        </ul>
-    </nav>
+if(process.env.NODE_ENV !== 'production'){
+    require('dotenv').config()
+}
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="about-container">
-            <img src="assets/assets-aboutphoto.jpg" alt="Pulkit Vishnoi" class="about-photo" />
-            <div class="about-text">
-                <h2>About the Founder</h2>
-                <p>
-                    Pulkit Vishnoi is a young and passionate entrepreneur with a vision to empower small businesses and freelancers with smart, simple, and reliable digital tools. Coming from a humble background, Pulkit has always believed in building something meaningful—something that truly helps people.
-                    <br /><br />
-                    With no formal technical background, he single-handedly built InvoiceGenie—a sleek, user-friendly invoicing and document utility platform designed to make billing effortless and professional for everyone.
-                    <br /><br />
-                    Driven by a self-taught hustle mindset, Pulkit turned his passion into purpose, proving that with determination and creativity, even the biggest dreams can be achieved without a traditional path.
-                    <br /><br />
-                    His mission is clear: to make powerful digital tools accessible to every corner of India and beyond, enabling individuals to save time, grow faster, and focus on what they love.
-                    <br /><br />
-                    For Pulkit, InvoiceGenie isn’t just a product—it’s a purpose. A dream born from the desire to help others simplify their journey and succeed in their own ventures.
-                </p>
-                <img src="assets/assets-signature.png" alt="Signature" class="signature-img" />
-            </div>
-        </div>
-    </section>
+const express = require('express')
+const path = require('path')
+const fileUpload = require('express-fileupload')
+const ejs = require('ejs')
+const db = require('./routes/db-config')
+const bcrypt = require('bcryptjs')
+const cookie = require('cookie-parser')
+const jwt = require('jsonwebtoken')
+const mysql = require('mysql')
+const app = express()
+const port = process.env.PORT
 
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2025 InvoiceGenie. All rights reserved.</p>
-    </footer>
+app.use('/js', express.static(__dirname + '/public/assets/js'))
+app.use('/css', express.static(__dirname + '/public/assets/css'))
+app.use('/template-css', express.static(__dirname + '/public/templates/template-css'))
+app.set('view engine','ejs')
+app.use(express.static('public'))
+app.use(cookie())
+app.use(express.json())
+app.use(fileUpload())
 
-    <script src="script.js"></script>
-</body>
-</html>
+// db.connect((err) => {
+//     if(err) throw err
+//     console.log('DB Connected!');
+// })
+
+
+
+app.use('/', require('./routes/pages').router)
+app.use('/api', require('./controllers/validate'))
+app.use('/api', require('./controllers/auth'))
+
+
+app.listen(port, ()=> console.log(`Server started on port: ${port}`))
+
