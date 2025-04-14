@@ -1,179 +1,43 @@
 <!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>InvoiceGenie - Smart Invoicing</title>
-  <link rel="icon" href="./assets/logo.png" type="image/png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }body {
-  background-color: #ffffff;
-  color: #222;
-}
-
-header {
-  background-color: #0058B3;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.logo img {
-  height: 40px;
-}
-
-nav a {
-  color: #fff;
-  margin: 0 0.8rem;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-.hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 4rem 2rem;
-  background-color: #f5f5f5;
-}
-
-.hero-text {
-  max-width: 50%;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-}
-
-.btn {
-  background-color: #0058B3;
-  color: white;
-  padding: 0.8rem 1.5rem;
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-.section {
-  padding: 4rem 2rem;
-}
-
-.section h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-
-.card {
-  background-color: #fff;
-  padding: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  flex: 1 1 calc(50% - 2rem);
-}
-
-footer {
-  background-color: #f5f5f5;
-  text-align: center;
-  padding: 1.5rem;
-  color: #777;
-  font-size: 0.9rem;
-}
-
-.about {
-  display: flex;
-  align-items: flex-start;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.about img {
-  width: 200px;
-  border-radius: 10px;
-}
-
-  </style>
+  <title>InvoiceGenie - Smart Billing for Everyone</title>
+  <link rel="stylesheet" href="style.css" />
 </head><body>
-  <header>
-    <div class="logo">
-      <img src="./assets/logo.png" alt="InvoiceGenie Logo">
-      <h1>InvoiceGenie</h1>
-    </div>
-    <nav>
-      <a href="#">Home</a>
+  <!-- Header -->
+  <header class="header">
+    <img src="assets_logo.png" alt="InvoiceGenie Logo" class="logo" />
+    <nav class="nav">
+      <a href="#home">Home</a>
       <a href="#features">Features</a>
+      <a href="#steps">Steps</a>
       <a href="#templates">Templates</a>
       <a href="#about">About</a>
-      <a href="#support">Support</a>
+      <a href="#help">Help & Support</a>
     </nav>
-  </header>  <section class="hero">
-    <div class="hero-text">
-      <h1>Simple, Smart & Free Invoicing Tool</h1>
-      <p>Create invoices, quotations & convert documents effortlessly.</p>
-      <button class="btn">Create Invoice Now</button>
-    </div>
-    <div class="hero-img">
-      <!-- Optional tool preview image -->
-    </div>
-  </section>  <section class="section" id="features">
-    <h2>Key Features</h2>
-    <div class="cards">
-      <div class="card">Create Invoices</div>
-      <div class="card">Generate Quotations</div>
-      <div class="card">Word to PDF</div>
-      <div class="card">PDF to Word</div>
-    </div>
-  </section>  <section class="section" id="templates">
-    <h2>Invoice Templates</h2>
-    <div class="cards">
-      <div class="card">Template 1</div>
-      <div class="card">Template 2</div>
-    </div>
-  </section>  <section class="section" id="about">
-    <h2>About the Founder</h2>
-    <div class="about">
-      <img src="./assets/founder.png" alt="Founder">
-      <div>
-        <p><strong>Pulkit Vishnoi</strong> is a passionate entrepreneur on a mission to empower small businesses with smart tools. From a humble background, he built InvoiceGenie single-handedly.</p>
-        <p><em>“Simplicity is the ultimate sophistication — InvoiceGenie proves it.”</em></p>
-        <img src="./assets/signature.png" alt="Signature" style="width:150px;margin-top:1rem">
+  </header>  <!-- About Section -->  <section id="about" class="about-section">
+    <div class="about-container">
+      <div class="about-left">
+        <img src="assets-founder.jpg" alt="Pulkit Vishnoi" class="founder-image" />
+      </div>
+      <div class="about-right">
+        <h2>About the Founder</h2>
+        <p>
+          <strong>Pulkit Vishnoi</strong> is a young and passionate entrepreneur with a vision to empower small businesses and freelancers with smart, simple, and reliable digital tools. Coming from a humble background, Pulkit has always believed in building something meaningful—something that truly helps people.
+        </p>
+        <p>
+          With no formal technical background, he single-handedly built InvoiceGenie—a sleek, user-friendly invoicing and document utility platform designed to make billing effortless and professional for everyone.
+        </p>
+        <p>
+          Driven by a self-taught hustle mindset, Pulkit turned his passion into purpose, proving that with determination and creativity, even the biggest dreams can be achieved without a traditional path.
+        </p>
+        <p>
+          His mission is clear: to make powerful digital tools accessible to every corner of India and beyond, enabling individuals to save time, grow faster, and focus on what they love.
+        </p>
+        <p>
+          <em>“For Pulkit, InvoiceGenie isn’t just a product—it’s a purpose.”</em>
+        </p>
+        <img src="assets-signature.png" alt="Signature" class="signature" />
       </div>
     </div>
-  </section>  <section class="section" id="support">
-    <h2>Help & Support</h2>
-    <p>Email us at: <strong>support@invoicegenieapp.com</strong></p>
-  </section>  <footer>
-    © 2025 InvoiceGenie. Made with purpose by Pulkit Vishnoi.
-  </footer>
-</body></html>
+  </section></body></html>
