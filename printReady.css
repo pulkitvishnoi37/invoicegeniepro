@@ -1,0 +1,432 @@
+/* **********************************Basic template formatting********************************** */
+.invoice-print-form{
+    max-width: 80%;
+    max-height: 100%;
+    width: 80%;
+    height: 100%;
+    border-radius: 1px;
+    box-shadow: 0px 0px 99px -53px rgba(101,119,235,1);
+    position: inherit;
+}
+
+h1, h2, h3, h4, h5, h6, p, small, div{
+    background-color: transparent;
+}
+
+/* .navbar{
+    --bs-navbar-padding-y: 0 !important;
+} */
+
+/* **********************************Basic template formatting********************************** */
+#Invoice-title{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    color: #4F3824;
+}
+
+.invoice-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.invoice-text{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.border{
+    border: 1px solid #4F3824 !important;
+}
+
+.more-detail-cont{
+    margin-top: -17px !important;
+}
+
+
+.mx-3{
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+    margin-top: -1px;
+}
+
+.logo-col{
+    margin-left: -1px;
+}
+
+p{
+    margin-bottom: 0;
+    color: #4F3824;
+}
+
+small{
+    margin-left: 0;
+    color: #4F3824;
+    font-weight: 200;
+}
+
+.invoice-logo-img{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.invoice-logo-img img{
+    max-width: 100%;
+    max-height: 80px;
+    object-fit: contain;
+    margin: 10px;
+    margin-right: 20px;
+}
+
+.more-details-inside-container{
+    display: flex;
+}
+
+.more-details-inside-container p{
+    margin-right: 10px;
+    color: #4F3824;
+}
+
+.invoice-details-bkg{
+    border: 1px solid #4F3824;
+    padding: 15px;
+    margin-top: -1px;
+}
+
+#more-details-con{
+    margin-top: 10px;
+}
+
+.from-to-col{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.from-col, .to-col{
+    margin-top: -17px;
+    padding: 10px;
+    color: #4F3824;
+}
+
+#from-text, #to-text{
+    font-size: 14px;
+}
+
+#from-add p, #to-add p{
+    color: #4F3824;
+}
+
+h6 strong{
+    font-size: 17px;
+}
+
+small{
+    margin: 0;
+    font-weight: 400;
+}
+
+p{
+    margin-bottom: 0 !important;
+}
+
+
+/* **********************table container************************/
+.table>:not(caption)>*>*{
+    background-color: white;
+}
+
+tbody, td, tfoot, th, thead, tr{
+    border-color: #4F3824;
+    border-width: 1px !important;
+}
+
+.table-dark{
+    --bs-table-color: #4F3824;
+}
+
+
+.table{
+    border: 1px solid #7e7e7e46;
+    color: #4F3824;
+}
+
+th{
+    font-weight: 600;
+}
+
+.invoice-info-table-container{
+    margin-left: 32px;
+    margin-right: 32px;
+    margin-top: -1px;
+}
+/* **********************table container************************/
+
+.notes-container-border{
+    border: 1px solid #7e7e7e46;
+    margin-left: 32px;
+    margin-right: 32px;
+    margin-top: -17px;
+}
+
+
+.inline-box-for-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #4F3824;
+    padding: 5px;
+    margin-bottom: -1px;
+}
+
+.total-div-container{
+    margin-left: -12px;
+    margin-right: -29px;
+    margin-top: -1px !important;
+}
+
+
+.terms-conditions-cont{
+    margin-left: 33px;
+    margin-right: 31px;
+    margin-bottom: 50px;
+    margin-top: 10px;
+}
+
+.title{
+    font-size: 13px;
+    font-weight: 600;
+    color: #4F3824;
+}
+
+hr{
+    color: #4F3824;
+    margin: 0;
+}
+
+#number-to-word{
+    font-weight: 600;
+    color: #4F3824;
+}
+
+
+.bank-details small, .bank-details p, #terms-conditions-con small, .notes{
+    font-size: 13px;
+    color: #4F3824;
+}
+
+.bank-details{
+    max-width: 100%;
+}
+
+.total-in-words{
+    margin-left: -13px;
+    margin-top: -25px;
+    margin-right: -10px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.terms-conditions-container{
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.terms-con{
+    margin-right: -1px;
+    margin-top: -11px;
+    margin-left: -1px;
+}
+
+
+
+#bank-details-con{
+    padding: 8px;
+    margin-top: -1px !important;
+}
+
+.bank-details-cont{
+    margin-top: -11px;
+    margin-right: 1px;
+}
+
+.invoice p{
+    font-size: 14px;
+    color: #4F3824;
+}
+
+.invoice small{
+    font-size: 13px;
+    color: #4F3824;
+}
+
+
+#check{
+    color: #407BFF;
+}
+
+.modal-backdrop{
+    position: unset !important;
+}
+
+.user-pic{
+    display: flex;
+    align-items: center;
+}
+.bi-person-circle{
+    font-size: 30px;
+    cursor: pointer;
+    color: #48BCFF;
+}
+.bi-chevron-down{
+    font-size: 15px;
+    cursor: pointer;
+    color: #48BCFF;
+}
+
+.submenu-wrap{
+    position: absolute;
+    top: 100%;
+    right: 3%;
+    width: 280px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+
+.submenu-wrap.open-menu{
+    max-height: 300px;
+}
+
+.sub-menu{
+    border: 1px solid rgba(156, 156, 156, 0.342);
+    background: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+}
+
+.user-info{
+    display: flex;
+    align-items: center;
+}
+
+.user-info h6{
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.user-info i{
+    font-size: 35px;
+    margin-right: 15px;
+}
+
+.sub-menu hr{
+    height: 1px;
+    width: 100%;
+    background: #000;
+}
+
+.sub-menu-link{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #525252;
+    margin: 12px 0;
+}
+
+.sub-menu-link p{
+    width: 100%;
+    color: #000;
+    font-weight: 100;
+    margin-bottom: 0;
+}
+
+.sub-menu-link span{
+    font-size: 20px;
+    transition: transform 0.5s;
+}
+
+.sub-menu-link:hover span{
+    transform:  translate(2px);
+}
+
+.sub-menu-link:hover p{
+    font-weight: bold;
+    color: #3269ff;
+}
+
+@media only screen and (max-width: 768px) {
+    .submenu-wrap{
+        right: unset;
+    }
+}
+
+
+/* *************************************************************** */
+.success_toast{
+    background-color: #D1E7DD;
+    padding: 10px;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+
+.success_toast .progress{
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: #D1E7DD;
+}
+
+.progress.active:before{
+    animation: progress 7s linear forwards
+}
+
+@keyframes progress{
+    100%{
+        width: 0;
+    }
+}
+
+.success_toast .progress:before{
+    content: '';
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #157347;
+}
+
+.error_toast{
+    background-color: #F8D7DA;
+    padding: 10px;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.error_toast .progress{
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: #F8D7DA;
+}
+
+.error_toast .progress:before{
+    content: '';
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #BB2D3B;
+}
+
+#toast_con{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

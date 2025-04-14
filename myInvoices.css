@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body{
+    background: #fff;
+}
+
+
+.table-refresh{
+    padding-top: 150px;
+}
+
+.table-dark{
+    --bs-table-bg: #407BFF;
+}
+
+.table{
+    --bs-table-bg: aliceblue;
+    border: 1px solid #407BFF;
+    --bs-table-striped-bg: #fff;
+}
+
+.bi-arrow-clockwise{
+    font-size: 20px;
+}
+
+.table-refresh__button{
+    border-radius: 50px;
+}
+
+.table-refresh__option{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.table-refresh__option > *:not(:last-child){
+    margin-right: 12px;
+}
+
+.table-refresh__button--refreshing{
+    animation: 0.5s rotate infinite linear;
+}
+
+@keyframes rotate {
+    to{
+        transform: rotate(1turn);
+    }
+}
+
+.table-refresh__label{
+    font-size: 0.8em;
+    color: #999999;
+}
+
+.custom-tooltip {
+    --bs-tooltip-bg: var(--bs-primary);
+}
+
+button, input, optgroup, select, textarea{
+    margin: 2px;
+}
+
+td{
+    vertical-align: middle !important;
+}
