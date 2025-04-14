@@ -1,34 +1,32 @@
-// InvoiceGenie Website Theme Update (Dark Green & Golden) import React from "react"; import { Button } from "@/components/ui/button"; import { Card, CardContent } from "@/components/ui/card"; import { motion } from "framer-motion";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>InvoiceGenie</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="InvoiceGenie Logo" class="logo" />
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="invoice.html">Invoice</a>
+      <a href="quotation.html">Quotation</a>
+      <a href="about.html">About</a>
+      <a href="support.html">Help & Support</a>
+    </nav>
+  </header>
 
-export default function HomePage() { return ( <main className="min-h-screen bg-white text-[#1C3D33]"> <header className="bg-[#1C3D33] text-white p-4 shadow-md"> <div className="container mx-auto flex justify-between items-center"> <h1 className="text-2xl font-bold">InvoiceGenie</h1> <nav className="space-x-6"> <a href="#" className="hover:text-[#F0EAD6]">Home</a> <a href="#" className="hover:text-[#F0EAD6]">Features</a> <a href="#" className="hover:text-[#F0EAD6]">Templates</a> <a href="#" className="hover:text-[#F0EAD6]">About</a> <a href="#" className="hover:text-[#F0EAD6]">Help & Support</a> </nav> </div> </header>
+  <main class="home-hero">
+    <h1>Welcome to InvoiceGenie</h1>
+    <p>Simple, Smart & Professional Invoicing for Everyone</p>
+    <a href="invoice.html" class="btn">Generate Invoice</a>
+  </main>
 
-<section className="py-20 px-4 bg-gradient-to-b from-[#F0EAD6] to-white">
-    <div className="container mx-auto text-center">
-      <h2 className="text-4xl font-bold mb-4">Create Invoices & Quotations in Seconds</h2>
-      <p className="text-lg mb-6">Professional, editable, and beautifully designed templates.</p>
-      <div className="flex flex-col sm:flex-row justify-center gap-4">
-        <Button className="bg-[#1C3D33] hover:bg-[#145C4E] text-white text-lg px-6 py-3">Create Invoice</Button>
-        <Button className="bg-[#1C3D33] hover:bg-[#145C4E] text-white text-lg px-6 py-3">Create Quotation</Button>
-      </div>
-    </div>
-  </section>
-
-  <section className="py-16 px-4">
-    <div className="container mx-auto">
-      <h3 className="text-3xl font-semibold mb-6 text-center">Features</h3>
-      <ul className="list-disc list-inside space-y-2 text-lg">
-        <li>15+ premium templates</li>
-        <li>Custom logo upload</li>
-        <li>GST / PAN / VAT options</li>
-        <li>Professional look and export as PDF</li>
-      </ul>
-    </div>
-  </section>
-
-  <footer className="bg-[#1C3D33] text-white py-6 text-center">
+  <footer>
     <p>&copy; 2025 InvoiceGenie. All rights reserved.</p>
   </footer>
-</main>
-
-); }
-
+</body>
+</html>
