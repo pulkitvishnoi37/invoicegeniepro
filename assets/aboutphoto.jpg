@@ -1,0 +1,10 @@
+<section id="about" class="about-section">
+  <div class="about-container">
+    <img src="assets/aboutphoto.jpg" alt="Pulkit Vishnoi" class="about-photo" />
+    <div class="about-text">
+      <h2>About the Founder</h2>
+      <p>Pulkit Vishnoi is a young and passionate entrepreneur with a vision to empower small businesses and freelancers with smart, simple, and reliable digital tools...</p>
+      <img src="assets/assets-signature.png" alt="Signature" class="signature-img" />
+    </div>
+  </div>
+</section>
