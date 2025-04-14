@@ -1,122 +1,41 @@
-/* Reset & Base Styling */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
+/* Final Clean CSS for InvoiceGenie Website */
 
-body {
-  background-color: #ffffff;
-  color: #333;
-  line-height: 1.6;
-  font-size: 16px;
-  padding: 20px;
-}
+{ margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
 
-/* Header */
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 30px;
-  background-color: #ffffff;
-  border-bottom: 2px solid #eaeaea;
-}
 
-header img {
-  height: 60px;
-}
+body { background-color: #ffffff; color: #333; line-height: 1.6; }
 
-.nav-links {
-  display: flex;
-  gap: 25px;
-}
+header { background-color: #ffffff; padding: 1rem 2rem; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
 
-.nav-links a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-}
+.logo { height: 50px; }
 
-.nav-links a:hover {
-  color: #007BFF;
-}
+.navbar ul { display: flex; list-style: none; gap: 1.5rem; }
 
-/* Hero Section */
-.hero {
-  text-align: center;
-  padding: 60px 20px;
-}
+.navbar a { text-decoration: none; color: #333; font-weight: 500; }
 
-.hero h1 {
-  font-size: 2.5rem;
-  color: #1a1a1a;
-}
+.navbar a:hover { color: #007BFF; }
 
-.hero p {
-  margin-top: 15px;
-  font-size: 1.2rem;
-  color: #555;
-}
+.hero { text-align: center; padding: 4rem 2rem; }
 
-.cta-button {
-  margin-top: 25px;
-  padding: 12px 30px;
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
+.hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
 
-.cta-button:hover {
-  background-color: #0056b3;
-}
+.hero p { font-size: 1.1rem; margin-bottom: 2rem; }
 
-/* About Section */
-.about {
-  margin-top: 60px;
-  padding: 40px;
-  background-color: #f9f9f9;
-  border-radius: 12px;
-  display: flex;
-  gap: 30px;
-  align-items: flex-start;
-}
+.hero .btn { background-color: #007BFF; color: #fff; padding: 0.8rem 2rem; border: none; border-radius: 5px; font-size: 1rem; cursor: pointer; }
 
-.about img {
-  width: 160px;
-  border-radius: 12px;
-}
+.hero .btn:hover { background-color: #0056b3; }
 
-.about-content {
-  flex: 1;
-}
+section { padding: 4rem 2rem; max-width: 1200px; margin: auto; }
 
-.about h2 {
-  margin-bottom: 10px;
-  color: #222;
-}
+h2 { font-size: 2rem; margin-bottom: 1.5rem; text-align: center; }
 
-.about p {
-  margin-bottom: 15px;
-  color: #444;
-}
+.about-photo { display: block; max-width: 200px; margin: 0 auto 1rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
 
-.about .signature {
-  margin-top: 20px;
-  width: 140px;
-}
+.bio { max-width: 800px; margin: 0 auto; font-size: 1.1rem; text-align: center; line-height: 1.8; }
 
-/* Footer */
-footer {
-  text-align: center;
-  margin-top: 60px;
-  padding: 20px;
-  border-top: 2px solid #eaeaea;
-  color: #777;
-  font-size: 0.9rem;
-}
+.signature { display: block; max-width: 150px; margin: 1.5rem auto 0; }
+
+.support { background-color: #f9f9f9; padding: 3rem 2rem; }
+
+footer { text-align: center; padding: 2rem; background-color: #f0f0f0; font-size: 0.9rem; color: #555; }
+
