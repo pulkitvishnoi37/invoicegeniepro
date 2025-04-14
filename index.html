@@ -1,107 +1,179 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>InvoiceGenie – Smart Billing Made Simple</title>
-  <link rel="icon" href="logo.png" />
+  <title>InvoiceGenie - Smart Invoicing</title>
+  <link rel="icon" href="./assets/logo.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #ffffff;
-      color: #222;
-    }
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }body {
+  background-color: #ffffff;
+  color: #222;
+}
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 40px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-      position: sticky;
-      top: 0;
-      background: #fff;
-      z-index: 10;
-    }
+header {
+  background-color: #0058B3;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
 
-    .logo {
-      height: 50px;
-    }
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
 
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #222;
-      font-weight: 500;
-    }
+.logo img {
+  height: 40px;
+}
 
-    nav a:hover {
-      color: #0056d6;
-    }
+nav a {
+  color: #fff;
+  margin: 0 0.8rem;
+  text-decoration: none;
+  font-weight: 500;
+}
 
-    .hero {
-      text-align: center;
-      padding: 80px 20px;
-    }
+nav a:hover {
+  text-decoration: underline;
+}
 
-    .hero h1 {
-      font-size: 48px;
-      margin-bottom: 20px;
-    }
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 2rem;
+  background-color: #f5f5f5;
+}
 
-    .hero p {
-      font-size: 18px;
-      margin-bottom: 30px;
-      color: #555;
-    }
+.hero-text {
+  max-width: 50%;
+}
 
-    .cta-btn {
-      background-color: #0056d6;
-      color: white;
-      padding: 14px 28px;
-      border: none;
-      font-size: 16px;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
 
-    .cta-btn:hover {
-      background-color: #0044b3;
-    }
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
 
-    footer {
-      text-align: center;
-      padding: 40px 20px;
-      color: #888;
-      font-size: 14px;
-    }
+.btn {
+  background-color: #0058B3;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.section {
+  padding: 4rem 2rem;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.card {
+  background-color: #fff;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  flex: 1 1 calc(50% - 2rem);
+}
+
+footer {
+  background-color: #f5f5f5;
+  text-align: center;
+  padding: 1.5rem;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.about {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.about img {
+  width: 200px;
+  border-radius: 10px;
+}
+
   </style>
-</head>
-<body>
-
+</head><body>
   <header>
-    <img src="logo.png" alt="InvoiceGenie Logo" class="logo" />
+    <div class="logo">
+      <img src="./assets/logo.png" alt="InvoiceGenie Logo">
+      <h1>InvoiceGenie</h1>
+    </div>
     <nav>
-      <a href="index.html">Home</a>
+      <a href="#">Home</a>
       <a href="#features">Features</a>
-      <a href="#steps">Steps</a>
-      <a href="templates.html">Templates</a>
-      <a href="about.html">About</a>
-      <a href="help.html">Help</a>
+      <a href="#templates">Templates</a>
+      <a href="#about">About</a>
+      <a href="#support">Support</a>
     </nav>
-  </header>
-
-  <div class="hero">
-    <h1>Smart Invoicing, Made Effortless</h1>
-    <p>Create beautiful invoices, quotes, and documents in seconds.</p>
-    <a href="invoice.html"><button class="cta-btn">Create Invoice Now</button></a>
-  </div>
-
-  <footer>
-    © 2025 InvoiceGenie. All rights reserved.
+  </header>  <section class="hero">
+    <div class="hero-text">
+      <h1>Simple, Smart & Free Invoicing Tool</h1>
+      <p>Create invoices, quotations & convert documents effortlessly.</p>
+      <button class="btn">Create Invoice Now</button>
+    </div>
+    <div class="hero-img">
+      <!-- Optional tool preview image -->
+    </div>
+  </section>  <section class="section" id="features">
+    <h2>Key Features</h2>
+    <div class="cards">
+      <div class="card">Create Invoices</div>
+      <div class="card">Generate Quotations</div>
+      <div class="card">Word to PDF</div>
+      <div class="card">PDF to Word</div>
+    </div>
+  </section>  <section class="section" id="templates">
+    <h2>Invoice Templates</h2>
+    <div class="cards">
+      <div class="card">Template 1</div>
+      <div class="card">Template 2</div>
+    </div>
+  </section>  <section class="section" id="about">
+    <h2>About the Founder</h2>
+    <div class="about">
+      <img src="./assets/founder.png" alt="Founder">
+      <div>
+        <p><strong>Pulkit Vishnoi</strong> is a passionate entrepreneur on a mission to empower small businesses with smart tools. From a humble background, he built InvoiceGenie single-handedly.</p>
+        <p><em>“Simplicity is the ultimate sophistication — InvoiceGenie proves it.”</em></p>
+        <img src="./assets/signature.png" alt="Signature" style="width:150px;margin-top:1rem">
+      </div>
+    </div>
+  </section>  <section class="section" id="support">
+    <h2>Help & Support</h2>
+    <p>Email us at: <strong>support@invoicegenieapp.com</strong></p>
+  </section>  <footer>
+    © 2025 InvoiceGenie. Made with purpose by Pulkit Vishnoi.
   </footer>
-
-</body>
-</html>
+</body></html>
