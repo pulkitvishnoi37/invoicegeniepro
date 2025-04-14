@@ -1,121 +1,107 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>InvoiceGenie</title>
-  <link rel="icon" href="logo.png" type="image/png">
+  <title>InvoiceGenie – Smart Billing Made Simple</title>
+  <link rel="icon" href="logo.png" />
   <style>
-    :root {
-      --primary-color: #1E1E1E;
-      --accent-color: #D4AF37;
-      --text-light: #fff;
-      --text-dark: #333;
-      --bg-light: #f5f5f5;
-    }body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: var(--primary-color);
-  color: var(--text-light);
-}
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ffffff;
+      color: #222;
+    }
 
-header {
-  padding: 1rem 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: var(--primary-color);
-}
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      background: #fff;
+      z-index: 10;
+    }
 
-header img {
-  height: 50px;
-}
+    .logo {
+      height: 50px;
+    }
 
-nav a {
-  color: var(--accent-color);
-  margin: 0 1rem;
-  text-decoration: none;
-}
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #222;
+      font-weight: 500;
+    }
 
-section {
-  padding: 4rem 2rem;
-  max-width: 1000px;
-  margin: auto;
-}
+    nav a:hover {
+      color: #0056d6;
+    }
 
-h1, h2 {
-  color: var(--accent-color);
-}
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+    }
 
-.features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
 
-.feature-card {
-  background-color: #2a2a2a;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-}
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      color: #555;
+    }
 
-.about img {
-  width: 120px;
-  border-radius: 100px;
-}
+    .cta-btn {
+      background-color: #0056d6;
+      color: white;
+      padding: 14px 28px;
+      border: none;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
 
-footer {
-  text-align: center;
-  padding: 2rem;
-  background-color: #111;
-  color: #999;
-}
+    .cta-btn:hover {
+      background-color: #0044b3;
+    }
 
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: #888;
+      font-size: 14px;
+    }
   </style>
 </head>
 <body>
+
   <header>
-    <img src="logo.png" alt="InvoiceGenie Logo">
+    <img src="logo.png" alt="InvoiceGenie Logo" class="logo" />
     <nav>
-      <a href="#home">Home</a>
+      <a href="index.html">Home</a>
       <a href="#features">Features</a>
-      <a href="#about">About</a>
-      <a href="#support">Help & Support</a>
+      <a href="#steps">Steps</a>
+      <a href="templates.html">Templates</a>
+      <a href="about.html">About</a>
+      <a href="help.html">Help</a>
     </nav>
-  </header>  <section id="home">
-    <h1>Welcome to InvoiceGenie</h1>
-    <p>Smart, Simple & Reliable Invoicing Tools for Freelancers & Small Businesses.</p>
-  </section>  <section id="features">
-    <h2>Features</h2>
-    <div class="features">
-      <div class="feature-card">
-        <h3>Invoice Generator</h3>
-        <p>Create sleek invoices with multiple templates and custom logos.</p>
-      </div>
-      <div class="feature-card">
-        <h3>Quotation Builder</h3>
-        <p>Design professional quotes with GST, PAN & optional VAT support.</p>
-      </div>
-      <div class="feature-card">
-        <h3>Word to PDF</h3>
-        <p>Convert your documents in one click, fast and accurate.</p>
-      </div>
-      <div class="feature-card">
-        <h3>PDF to Word</h3>
-        <p>Edit your PDFs quickly by converting them into Word format.</p>
-      </div>
-    </div>
-  </section>  <section id="about" class="about">
-    <h2>About the Founder</h2>
-    <img src="founder.jpg" alt="Pulkit Vishnoi">
-    <p><strong>Pulkit Vishnoi</strong> is a young and passionate entrepreneur with a vision to empower small businesses and freelancers with smart, simple, and reliable digital tools.</p>
-    <p>"Building meaningful tools that help real people succeed. That’s my mission."</p>
-    <img src="signature.png" alt="Signature" style="width:150px;margin-top:1rem;">
-  </section>  <section id="support">
-    <h2>Help & Support</h2>
-    <p>For FAQs, troubleshooting, and direct support, contact us at <strong>support@invoicegenieapp.com</strong></p>
-  </section>  <footer>
-    &copy; 2025 InvoiceGenie. All rights reserved.
+  </header>
+
+  <div class="hero">
+    <h1>Smart Invoicing, Made Effortless</h1>
+    <p>Create beautiful invoices, quotes, and documents in seconds.</p>
+    <a href="invoice.html"><button class="cta-btn">Create Invoice Now</button></a>
+  </div>
+
+  <footer>
+    © 2025 InvoiceGenie. All rights reserved.
   </footer>
+
 </body>
 </html>
