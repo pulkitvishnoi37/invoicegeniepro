@@ -37,3 +37,17 @@ footer {
     background-color: #4CAF50;
     color: white;
 }
+
+.invoice-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f9f9f9;
+}
+.invoice-item button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
